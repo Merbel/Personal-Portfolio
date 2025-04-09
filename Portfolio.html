@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: rgb(0, 0, 75);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 15px;
+      align-items: center;
+      height: 100%;
+    }
+    .sidebar .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .sidebar .logo img {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+    .sidebar .logo span {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .nav-links {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+      display: block;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: background-color 0.3s, transform 0.2s;
+      text-align: center;
+    }
+    .nav-links a:hover {
+      background-color: rgb(40, 69, 123);
+      transform: translateX(5px);
+      width: 150px;
+      font-weight: bold;
+    }
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      background-color: #808080;
+      padding: 45px;
+      border-bottom: 1px solid #ccc;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 36px;
+      color: #333;
+    }
+    .content {
+      flex: 1;
+      padding: 40px;
+      background-color: #ecf0f1;
+      overflow-y: auto;
+    }
+    .profile-section {
+      max-width: 800px;
+      margin: 0;
+      text-align: left;
+    }
+    .profile-section h1 {
+      font-size: 36px;
+    }
+    .profile-section h2 {
+      font-size: 24px;
+    }
+    .profile-section p {
+      font-size: 18px;
+    }
+
+    /* Image hover effect - FIXED HERE */
+    .hover-image {
+      width: 100%;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hover-image:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/486648729_968323962086823_2807473656249650792_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=JMsmIi_tvZEQ7kNvwGMmdBE&_nc_oc=AdlHV4Hadd3xZNKPFHXz5tgbc0lVqzDN2RpmWXd74j1I9pdhF_msLNshokHWVWEJibM&_nc_zt=23&_nc_ht=scontent.fmnl33-6.fna&_nc_gid=0NJCD4JDYrQLGicn0OLRcw&oh=00_AfFsiu3MuJGiUcwAk0qSobFDpErm9acdIqUALyiwlycBrw&oe=67FA898E" alt="Logo" />
+      <span>Portfolio</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Skills.html">Skills</a>
+      <a href="Portfolio.html">Portfolio</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <footer>
+      <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+  </div>
+  <div class="main">
+    <div class="header">
+      <h2>📚PORTFOLIO</h2>
+    </div>
+    <div class="content">
+      <div class="profile-section">
+        <img src="Proj1.png" alt="Project1" class="hover-image">
+        <h1>Project 1:</h1>
+        <h2>Fundamental Of Programming - Final Project</h2>
+      </div>
+      <hr style="border: none; height: 2px; background-color: #333; margin: 20px 0;">
+      <div class="profile-section">
+        <img src="Proj2.png" alt="Project2" class="hover-image">
+        <h1>Project 2:</h1>
+        <h2>Intermediate Programming - Machine Problem #6 (File Input Output)</h2>
+      </div>
+      <hr style="border: none; height: 2px; background-color: #333; margin: 20px 0;">
+      <div class="profile-section">
+        <img src="Proj3.png" alt="Project3" class="hover-image">
+        <h1>Project 3:</h1>
+        <h2>Intermediate Programming - Machine Problem #4 (String Function)</h2>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: rgb(0, 0, 75);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 15px;
+      align-items: center;
+      height: 100%;
+    }
+    .sidebar .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .sidebar .logo img {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+    .sidebar .logo span {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .nav-links {
+      flex-grow: 1; /* Allow the nav-links section to grow and fill the available space */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+      display: block;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: background-color 0.3s, transform 0.2s;
+      text-align: center;
+    }
+    .nav-links a:hover {
+      background-color: rgb(40, 69, 123);
+      transform: translateX(5px);
+      width: 150px;
+      font-weight: bold;
+    }
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      background-color: #808080; /* Grey background */
+      padding: 45px; /* Increased padding for a larger header */
+      border-bottom: 1px solid #ccc;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 36px; /* Increased font size */
+      color: #333;
+    }
+    .content {
+      flex: 1;
+      padding: 40px;
+      background-color: #ecf0f1;
+      overflow-y: auto;
+    }
+    .profile-section {
+      max-width: 800px;
+      margin: 0;
+      text-align: left;
+    }
+    .profile-section h1 {
+      font-size: 36px;
+    }
+    .profile-section p {
+      font-size: 25px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      width: 100%;
+    }
+    .image-link {
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+  }
+  /* Initial state of the image */
+  .hover-image {
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  /* Hover effect */
+  .image-link:hover .hover-image {
+    transform: scale(1.1); /* Zoom in effect */
+    opacity: 0.8; /* Slight transparency on hover */
+  }
+  button {
+    background-color: #eac86b;
+    border: 1px solid #eac86b;
+  }
+  button:hover {
+    background-color: #F8D870;
+    font-size: 1.3em;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+  }
+  input, textarea {
+    border: 2px solid black;
+    width: 450px;
+  }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/486648729_968323962086823_2807473656249650792_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=JMsmIi_tvZEQ7kNvwGMmdBE&_nc_oc=AdlHV4Hadd3xZNKPFHXz5tgbc0lVqzDN2RpmWXd74j1I9pdhF_msLNshokHWVWEJibM&_nc_zt=23&_nc_ht=scontent.fmnl33-6.fna&_nc_gid=0NJCD4JDYrQLGicn0OLRcw&oh=00_AfFsiu3MuJGiUcwAk0qSobFDpErm9acdIqUALyiwlycBrw&oe=67FA898E" alt="Logo" />
+      <span>Contact</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Skills.html">Skills</a>
+      <a href="Portfolio.html">Portfolio</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <!-- Footer inside sidebar -->
+    <footer>
+      <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+  </div>
+  <div class="main">
+    <div class="header">
+      <h2>📞CONTACT ME</h2>
+    </div>
+    <div class="content">
+      <div class="profile-section">
+        <p>Contact me at these clickable icons:</p>
+        <a href="https://www.facebook.com/merbsebonite/" class="image-link">
+          <img src="fb.webp" alt="Click to visit Example" class="hover-image" height="300" width="300">
+        </a>
+        <a href="mailto:mmebonite1605qc@student.fatima.edu.ph" class="image-link">
+          <img src="gmaill.png" alt="Click to visit Example" class="hover-image" height="300" width="300">
+        </a>
+        <form action="#">
+          <label for="name">Full Name:</label><br>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">Email Address:</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="subject">Subject:</label><br>
+          <input type="text" id="subject" name="subject" required><br><br>
+
+          <label for="message">Your Concern:</label><br>
+          <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+          <button type="submit">Submit</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
